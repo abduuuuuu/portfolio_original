@@ -333,7 +333,7 @@ font-family: var(--poppins);
 .project{
     background-color:var(--main-color);
     width: 100%;
-    height:380vh;
+    height:auto;
 }
 .project h3{
     text-align: center;
