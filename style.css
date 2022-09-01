@@ -25,6 +25,8 @@ header{
     width: 100%;
     padding: 5px 20%;
     z-index: 1000;
+    border-bottom: 2px solid 
+    whitesmoke;
 }
 header .logo img{
     width: 50px;
@@ -44,7 +46,7 @@ header ul li a{
     transition: .2s;
     letter-spacing: .3px;
 }
-header ul li a:hover{
+header ul li a:hover,.active{
     color: var(--CTA-color);
     transition: .2s;
 }
