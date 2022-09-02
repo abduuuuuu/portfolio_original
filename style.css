@@ -50,6 +50,12 @@ header ul li a:hover,.active{
     color: var(--CTA-color);
     transition: .2s;
 }
+.burger{
+    font-size: 30px;
+    display: none;
+    cursor: pointer;
+    transition: .2s;
+}
 section{
     padding: 100px 20%;
 }
@@ -75,6 +81,14 @@ section{
     font-size: 17px;
     letter-spacing: 0.3px;
     margin-top: 30px;
+}
+.hero .hero-sub-fake{
+    color: var(--light-color);
+    font-family: var(--poppins);
+    font-size: 17px;
+    letter-spacing: 0.3px;
+    margin-top: 30px;
+  display: none;
 }
 .btn{
     margin-top: 60px;
@@ -263,10 +277,12 @@ footer{
     justify-content: space-between;
     align-items: center;
     padding: 0 20%;
+    margin-bottom: 0;
     width: 100%;
     height: 8vh;
     background-color: var(--main-color);
     bottom: 0;
+    border-top: 2px solid rgb(234, 233, 233);
 }
 footer .copyright i{
     color: var(--CTA-color);
@@ -318,9 +334,20 @@ footer .social i:hover{
     font-family: var(--outfit);
     white-space: nowrap;
 }
+.about .about-text #about-first-para-fake{
+    font-size: 25px;
+    font-family: var(--outfit);
+    white-space: nowrap;
+    display: none;
+}
 .about .about-text #about-second-para{
 font-size: 17px;
 font-family: var(--poppins);
+}
+.about .about-text #about-second-para-fake{
+    display: none;
+    font-size: 17px;
+    font-family: var(--poppins);  
 }
 .question{
     text-align: center;
@@ -336,6 +363,7 @@ font-family: var(--poppins);
     background-color:var(--main-color);
     width: 100%;
     height:auto;
+    text-align: center;
 }
 .project h3{
     text-align: center;
@@ -347,48 +375,23 @@ font-family: var(--poppins);
     display: grid;
     grid-template-columns: 1fr;
     align-items: center;
-    grid-gap: 20rem;
+    grid-gap: 10rem;
 }
 .project-box .one{
     width: 800px;
     height: auto;
     max-width: 100%;
+    transition: .5s;
+}
+.project-box .one:hover{
+    transform: scale(1.02);
+    transition: .5s;
 }
 
-@keyframes change-direction{
-    0%{
-        transform: translate(-270px,80px);
-    }
-    100%{
-        transform: translate(-70px,50px) rotate(-21deg);
-    }
-}
-
-.project-box .two{
-    position: absolute;
-    transform: translate(-270px,80px);
-    width: 500px;
-    height: auto;
-   max-width: 100%;
-}
-/*
-.project-box .two{
-    animation-name: change-direction;
-    animation-timing-function: linear;
-    animation-duration: 3s;
-    animation-fill-mode: forwards;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-}
-.project-box .two:hover{
-    animation-play-state: paused;
-}
-
-*/
 .project-box p{
     font-size: 23px;
     font-family:var(--outfit);
-    margin-top: 10px;   
+    margin-top: 15px;   
 }
 .project-box .code-watch i{
     padding: 10px;
@@ -414,6 +417,9 @@ font-family: var(--poppins);
 }
 .contact form{
     margin-bottom: 70px;
+}
+.email-fake{
+    display: none;
 }
 .contact h3{
     text-align: center;
@@ -467,3 +473,162 @@ font-family: var(--poppins);
     transform: translateY(-2px);
     transition: 1s;
 }
+@media screen and (max-width:1660px) {
+   section{
+    padding: 100px 10%;
+   }
+   header{
+    padding: 5px 10%;
+   }
+   footer{
+    padding: 0 10%;
+   }
+}
+@media screen and (max-width:1340px){
+    .testimonial-box #test-box-para{
+        white-space: nowrap;
+    }
+    .process-container .process-box p{
+        white-space: nowrap;
+    }
+    .process-container .process-box{
+        overflow: hidden;
+    }
+    section{
+        padding: 100px 5%;
+       }
+       header{
+        padding: 5px 5%;
+       }
+       footer{
+        padding: 0 5%;
+       }
+}
+@media screen and (max-width:1260px){
+ul{
+    position: absolute;
+    top: 58px;
+    right: 0;
+    background-color: whitesmoke;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    z-index: 1001;
+    transform: translateX(100%);
+    overflow-x: hidden;
+    transition: .2s linear;
+}
+.ul-active{
+transform: translateX(0%);
+transition: .2s linear;
+}
+.burger-active{
+    transform: rotate(360deg);
+    transition: .2s;
+}
+.burger{
+    display: block;
+}
+.about{
+    grid-template-columns: 1fr;
+    padding: 100px 25%;
+}
+section{
+    padding: 100px 3%;
+}
+header{
+    padding: 5px 3%;
+}
+footer{
+    padding: 0 3%;
+   }
+.hero{
+        padding-top: 150px;
+        grid-template-columns: 1fr;
+        height: auto;
+    }
+    .hero-text{
+        text-align: center;
+    }
+    .hero-img{
+        text-align: center;
+    }
+    .hero-img img{
+        width: 500px;
+        max-width: 100%;
+        height: auto;
+    }
+}
+    @media screen and (max-width:1000px){
+        .about{
+            grid-template-columns: 1fr;
+            padding: 100px 10%;
+        }
+    }
+    @media screen and (max-width:680px){
+    .about{
+        grid-template-columns: 1fr;
+        padding: 100px 3%;
+    }
+    .about .about-text h3{
+        font-family: var(--outfit);
+        font-size: 25px;
+        margin-bottom: 10px;
+    }
+    .about .about-img img{
+        transform: translateX(0px);
+        width: 350px;
+    }
+    .about .about-text #about-first-para{
+        font-size: 20px;
+        font-family: var(--outfit);
+        white-space: nowrap;
+    }
+    .about .about-text #about-second-para{
+    font-size: 15px;
+    font-family: var(--poppins);
+    }
+    }
+    @media screen and (max-width:530px){
+        .about .about-text #about-second-para-fake{
+            display: block;
+        }
+        .about .about-text #about-second-para{
+            display: none;
+        }
+        .about .about-text #about-first-para-fake{
+            display: block;
+        }
+        .about .about-text #about-first-para{
+            display: none;
+        }
+    }
+    @media screen and (max-width:500px){
+        .email{
+            display: none;
+        }
+        .email-fake{
+            display: block;
+        }
+    }
+    @media screen and (max-width:500px){
+        .hero .hero-sub{
+            display: none;
+        }
+        .hero .hero-sub-fake{
+       display: block;
+        }
+    }
+    @media screen and (max-width:450px){
+      footer{
+        display: grid;
+        grid-template-columns: 1fr;
+        text-align: center;
+        bottom: 0;
+        height: 100px;
+        overflow-x: hidden;
+      }
+    }
