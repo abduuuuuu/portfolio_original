@@ -207,8 +207,9 @@ transition: .5s;
     margin-bottom: 20px;
 }
 .testimonial-box .flex .img{
-    height: 50px;
-    width: 50px;
+    height: 75px;
+    width: 75px;
+    padding: 5px;
     background-color: transparent;
     border: 2px solid var(--CTA-color);
     border-radius: 50%;
@@ -229,6 +230,11 @@ font-size: 17px;
 letter-spacing: .2px;
 font-family: var(--poppins);
 color: var(--light-color);
+}
+.testimonial-box i{
+    color:var(--CTA-color);
+    font-size: 25px;
+    margin-bottom: 10px;
 }
 .process{
     width: 100%;
@@ -384,7 +390,7 @@ font-family: var(--poppins);
     transition: .5s;
 }
 .project-box .one:hover{
-    transform: scale(1.02);
+    transform: scale(1.005);
     transition: .5s;
 }
 
@@ -595,6 +601,7 @@ footer{
     @media screen and (max-width:530px){
         .about .about-text #about-second-para-fake{
             display: block;
+            
         }
         .about .about-text #about-second-para{
             display: none;
